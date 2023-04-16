@@ -1,9 +1,10 @@
 <script setup>
 // import Versions from './components/Versions.vue'
 import DataView from './components/DataView.vue'
-Kakao.init('a58f889b066015dd555af2bb7577af7e')
-console.log('kakao_initialized: ', Kakao.isInitialized())
 import MessageBoard from './components/MessageBoard.vue'
+// Kakao.init('a58f889b066015dd555af2bb7577af7e')
+// console.log('kakao_initialized: ', Kakao.isInitialized())
+
 </script>
 
 <template>
@@ -20,16 +21,16 @@ import MessageBoard from './components/MessageBoard.vue'
       <a target="_blank" href="https://evite.netlify.app">Documentation</a>
     </div>
     <div class="link-item link-dot">•</div>
-    <div class="link-item">
-      <a target="_blank" href="https://github.com/alex8088/electron-vite">Getting Help</a>
-        </div>
-          <div class="link-item link-dot">•</div>
-          <div class="link-item">
-                          <a target="_blank" href="https://github.com/alex8088/quick-start/tree/master/packages/create-electron">
-                            create-electron
-                          </a>
-                        </div>
-                      </div> -->
+      <div class="link-item">
+              <a target="_blank" href="https://github.com/alex8088/electron-vite">Getting Help</a>
+                </div>
+                  <div class="link-item link-dot">•</div>
+                  <div class="link-item">
+                                  <a target="_blank" href="https://github.com/alex8088/quick-start/tree/master/packages/create-electron">
+                                    create-electron
+                                  </a>
+                                </div>
+                              </div> -->
 
   <div class="features">
     <div class="feature-item">

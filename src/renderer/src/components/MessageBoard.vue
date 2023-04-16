@@ -5,6 +5,8 @@ import qs from 'qs'
 import { NButton, NCard, NInput, NSpace, NRadio, NTag, NSwitch, NIcon } from 'naive-ui'
 import Swal from 'sweetalert2'
 import { CommentsDollar, Tablets, Fax, ChartBarRegular, UserCheck, CommentDotsRegular } from '@vicons/fa'
+Kakao.init('a58f889b066015dd555af2bb7577af7e')
+console.log('kakao_initialized: ', Kakao.isInitialized())
 
 //kakao scripts start from here
 const kakaoLogin = () => {
