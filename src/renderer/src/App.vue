@@ -22,15 +22,15 @@ import MessageBoard from './components/MessageBoard.vue'
     </div>
     <div class="link-item link-dot">•</div>
       <div class="link-item">
-              <a target="_blank" href="https://github.com/alex8088/electron-vite">Getting Help</a>
-                </div>
-                  <div class="link-item link-dot">•</div>
-                  <div class="link-item">
-                                  <a target="_blank" href="https://github.com/alex8088/quick-start/tree/master/packages/create-electron">
-                                    create-electron
-                                  </a>
-                                </div>
-                              </div> -->
+                  <a target="_blank" href="https://github.com/alex8088/electron-vite">Getting Help</a>
+                    </div>
+                      <div class="link-item link-dot">•</div>
+                      <div class="link-item">
+                                      <a target="_blank" href="https://github.com/alex8088/quick-start/tree/master/packages/create-electron">
+                                        create-electron
+                                      </a>
+                                    </div>
+                                  </div> -->
 
   <div class="features">
     <div class="feature-item">
