@@ -8,13 +8,6 @@ import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
 import { format } from 'date-fns'
 import { ko } from 'date-fns/esm/locale'
 import Swal from 'sweetalert2'
-// import MessageBoard from './MessageBoard.vue'
-// import LoginView from './LoginView.vue'
-// import { useIdentityStore } from '../stores/identityStore'
-
-//login 마트의원
-// const identityStore = useIdentityStore()
-
 
 //datatable
 DataTable.use(DataTablesCore)
@@ -76,47 +69,35 @@ const columns = [
 </script>
 
 <template>
-  <main class="main">
-    <!-- <div v-if="!identityStore.isAllowed">
-              <login-view />
-            </div> -->
-
-    <!-- <div v-if="identityStore.isAllowed"> -->
-    <!-- <MessageBoard /> -->
-    <DataTable class="display" :columns="columns" :data="aptRef" :options="options">
-      <thead>
-        <tr>
-          <th>날짜</th>
-          <th>이름</th>
-          <th>주민번호</th>
-          <th>재진?</th>
-          <th>메모</th>
-          <th>핸드폰</th>
-          <th>내용</th>
-          <th>이메일</th>
-        </tr>
-      </thead>
-      <tfoot>
-        <tr>
-          <th>날짜</th>
-          <th>이름</th>
-          <th>주민번호</th>
-          <th>재진?</th>
-          <th>메모</th>
-          <th>핸드폰</th>
-          <th>내용</th>
-          <th>이메일</th>
-        </tr>
-      </tfoot>
-    </DataTable>
-
-    <!-- </div> -->
-
-  </main>
+  <DataTable class="display" :columns="columns" :data="aptRef" :options="options">
+    <thead>
+      <tr>
+        <th>날짜</th>
+        <th>이름</th>
+        <th>주민번호</th>
+        <th>재진?</th>
+        <th>메모</th>
+        <th>핸드폰</th>
+        <th>내용</th>
+        <th>이메일</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <th>날짜</th>
+        <th>이름</th>
+        <th>주민번호</th>
+        <th>재진?</th>
+        <th>메모</th>
+        <th>핸드폰</th>
+        <th>내용</th>
+        <th>이메일</th>
+      </tr>
+    </tfoot>
+  </DataTable>
 </template>
 <style>
 @import 'datatables.net-dt';
 @import 'datatables.net-bs5';
 @import '../../../../node_modules/sweetalert2/dist/sweetalert2.min.css'
-/* @import '../../node_modules/sweetalert2/dist/sweetalert2.min.css'; */
 </style>
