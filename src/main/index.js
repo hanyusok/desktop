@@ -8,7 +8,7 @@ function createWindow() {
   const mainWindow = new BrowserWindow({
     width: 900,
     height: 670,
-    show: false,
+    show: true,
     autoHideMenuBar: true,
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
@@ -23,7 +23,9 @@ function createWindow() {
 
   mainWindow.webContents.setWindowOpenHandler((details) => {
     shell.openExternal(details.url)
-    return { action: 'allow' }
+    return {
+      action: 'allow'
+    }
   })
 
   // HMR for renderer base on electron-vite cli.

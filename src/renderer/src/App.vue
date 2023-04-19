@@ -1,9 +1,6 @@
 <script setup>
 import DataView from './components/DataView.vue'
 import MessageBoard from './components/MessageBoard.vue'
-// Kakao.init('a58f889b066015dd555af2bb7577af7e')
-// console.log('kakao_initialized: ', Kakao.isInitialized())
-
 </script>
 
 <template>
