@@ -22,8 +22,8 @@ import MessageBoard from './components/MessageBoard.vue'
     </div>
     <div class="link-item link-dot">•</div>
       <div class="link-item">
-                  <a target="_blank" href="https://github.com/alex8088/electron-vite">Getting Help</a>
-                    </div>
+                    <a target="_blank" href="https://github.com/alex8088/electron-vite">Getting Help</a>
+                      </div>
                       <div class="link-item link-dot">•</div>
                       <div class="link-item">
                                       <a target="_blank" href="https://github.com/alex8088/quick-start/tree/master/packages/create-electron">
@@ -32,7 +32,7 @@ import MessageBoard from './components/MessageBoard.vue'
                                     </div>
                                   </div> -->
 
-  <div class="features">
+<!-- <div class="features">
     <div class="feature-item">
       <article>
         <h2 class="title">Configuring</h2>
@@ -83,15 +83,15 @@ import MessageBoard from './components/MessageBoard.vue'
     </div>
     <div class="feature-item">
       <article>
-        <h2 class="title">Packaging</h2>
-        <p class="detail">
-          Use
-          <a target="_blank" href="https://www.electron.build">electron-builder</a>
-          and pre-configured to pack your app.
-        </p>
-      </article>
-    </div>
-  </div>
+          <h2 class="title">Packaging</h2>
+          <p class="detail">
+            Use
+            <a target="_blank" href="https://www.electron.build">electron-builder</a>
+            and pre-configured to pack your app.
+          </p>
+        </article>
+      </div>
+    </div> -->
   <message-board></message-board>
   <data-view></data-view>
 </template>
