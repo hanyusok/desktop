@@ -118,7 +118,7 @@ const shareMemo = (name, memo) => {
             <article>
                 <div><n-icon size="30"><user-check /></n-icon></div>
                 <h2 class="title">카톡 로그인</h2>
-                <p class="detail">사용자 로그인</p>
+                <p class="detail">마트의원 알림톡 보내기</p>
                 <n-button @click="kakaoLogin">로그인</n-button>
                 <n-button @click="kakaoLogOut">로그아웃</n-button>
                 <!-- <n-button tertiary round type="success" v-if="!access_token" @click="kakaoLogin">카카오로그인</n-button> -->
@@ -130,8 +130,8 @@ const shareMemo = (name, memo) => {
                 <n-icon size="30"><comments-dollar /></n-icon>
                 <h2 class="title">수납안내</h2>
                 <p class="detail">
-                    진료비용 이체금액 안내드립니다</p>
-                <n-input round v-model:value="cost" placeholder="요청금액">
+                    진료비 이체안내</p>
+                <n-input round v-model:value="cost" placeholder="금액">
                     <template #suffix>원</template>
                 </n-input>
                 <n-button @click="shareMsgInfo(cost)">알림톡</n-button>
@@ -141,12 +141,13 @@ const shareMemo = (name, memo) => {
         <div class="feature-item">
             <article>
                 <n-icon size="30"><comment-dots-regular /></n-icon>
-                <h2 class="title">문자전송</h2>
-                <p class="detail">안내문자 전송</p>
-                <n-space item-style="display: flex;" align="start" vertical>
-                    이름<n-input v-model:value="name" type="text" placeholder="이름" />
-                    메모<n-input maxlength="200" show-count v-model:value="memo" type="textarea" placeholder="내용" />
-                </n-space>
+                <h2 class="title">안내문자 보내기</h2>
+                <p class="detail">
+                    <n-space item-style="display: flex;" align="start" vertical>
+                        이름<n-input v-model:value="name" type="text" placeholder="이름" />
+                        메모<n-input maxlength="200" show-count v-model:value="memo" type="textarea" placeholder="내용" />
+                    </n-space>
+                </p>
                 <n-button @click="shareMemo(name, memo)">알림톡</n-button>
             </article>
         </div>
@@ -156,7 +157,7 @@ const shareMemo = (name, memo) => {
                     <tablets />
                 </n-icon>
                 <h2 class="title">약국처방전</h2>
-                <p class="detail">마트(제일)약국으로 처방전 전송되었습니다.</p>
+                <p class="detail">마트(제일)약국으로... </p>
                 <n-button @click="shareMsgPharm">알림톡</n-button>
             </article>
         </div>
@@ -166,7 +167,7 @@ const shareMemo = (name, memo) => {
                     <fax />
                 </n-icon>
                 <h2 class="title">이메일/팩스처방전</h2>
-                <p class="detail">고객희망 처방전 전송</p>
+                <!-- <p class="detail">고객희망 처방전 전송</p> -->
                 <n-space item-style="display: flex;" align="center">
                     <n-radio :checked="checkedValue === 'email'" value="email" @change="handleChange">이메일</n-radio>
                     <n-radio :checked="checkedValue === 'fax'" value="fax" @change="handleChange">팩스</n-radio>
@@ -176,11 +177,9 @@ const shareMemo = (name, memo) => {
         </div>
         <div class="feature-item">
             <article>
-                <h2 class="title">검사결과</h2>
                 <n-icon size="30"><chart-bar-regular /></n-icon>
-                <p class="detail">
-                    검사결과 상담 가능하니, 내원안내드립니다.
-                </p>
+                <h2 class="title">검사결과 안내</h2>
+                <p class="detail">상담 내원 안내...</p>
                 <n-button @click="sharelab">알림톡</n-button>
             </article>
         </div>
