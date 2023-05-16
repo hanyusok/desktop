@@ -2,6 +2,7 @@ import { app, shell, BrowserWindow } from 'electron'
 import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
+import { Session } from 'inspector'
 
 function createWindow() {
   // Create the browser window.
@@ -9,22 +10,30 @@ function createWindow() {
     width: 900,
     height: 670,
     show: true,
+    frame: true,
     autoHideMenuBar: true,
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
-      sandbox: false
+      sandbox: false     
     }
-  })
+  }) 
 
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()
   })
 
+  //카톡share window setting
   mainWindow.webContents.setWindowOpenHandler((details) => {
     shell.openExternal(details.url)
     return {
-      action: 'allow'
+      action: 'allow',
+      outlivesOpener: true,
+      overrideBrowserWindowOptions: {
+        frame: true,
+        fullscreenable: false,       
+
+      }
     }
   })
  
