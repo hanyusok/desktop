@@ -1,6 +1,9 @@
 # desktop
 
 비대면 관리자
+```bash
+electron desktop app(for windows)
+```
 
 ## Project Setup
 
